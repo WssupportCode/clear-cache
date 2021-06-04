@@ -23,12 +23,13 @@
 3. Добавить страницу /local/admin/custom_cache.php.
    Это непосредственно админ.страница для очистки кеша. Она разработана на основе штатной страницы.
 4. Добавить обработчик события построения административного меню OnBuildGlobalMenu.
-   Для этого нужно в init.php подключить файл /local/php_interface/include/eventHandlers.php. Если такой уже имеется,
-   добавить в него обработчик. Это необходимо для добавления в административное меню пункта перехода на страницу очистки кеша. 
-5. Код обработчика /local/php_interface/classes/Handlers/Menu/AdminMenu.php подключить в библиотеке классов.
-6. Зарегистрировать сервис проверки доступа (см. файл /local/php_interface/config.php).
-7. Код сервиса /local/php_interface/classes/Services/UserAccess.php подключить в библиотеке классов.
-8. В файле /local/php_interface/classes/Services/UserAccess.php:12 указать ID группы Контент-редакторов.
+   Для этого нужно код обработчика /local/php_interface/classes/Handlers/Menu/AdminMenu.php подключить в библиотеке
+   классов. В init.php подключить файл /local/php_interface/include/eventHandlers.php. Если такой уже имеется,
+   добавить в него обработчик. Это необходимо для добавления в административное меню пункта перехода на страницу очистки
+   кеша.
+5. Добавить сервис проверки доступа. Для этого нужно код сервиса /local/php_interface/classes/Services/UserAccess.php
+   подключить в библиотеке классов. Зарегистрировать сервис проверки доступа (см. файл /local/php_interface/config.php).
+6. В файле /local/php_interface/classes/Services/UserAccess.php:12 указать ID группы Контент-редакторов.
 
 ## Результат
 

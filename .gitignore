@@ -1,0 +1,5 @@
+# bitrix rules
+/bitrix/*
+!/bitrix/admin/
+/bitrix/admin/*
+!/bitrix/admin/custom_cache.php
